@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="7dp"
+        android:outlineAmbientShadowColor="@color/accent"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_gradient"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_date_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Tuesday, 23 August 2022"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_gradient"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_temp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="34dp"
+                            android:src="@drawable/androidicon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_temp_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_temperature"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_temp" />
+
+                        <TextView
+                            android:id="@+id/tv_temperature"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_temp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_gradient"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_waterAcid"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="34dp"
+                            android:src="@drawable/androidicon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_water_acid_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_water_acid"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_waterAcid" />
+
+                        <TextView
+                            android:id="@+id/tv_water_acid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Water Acidity"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_waterAcid" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_gradient"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_turbidity"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="34dp"
+                            android:src="@drawable/androidicon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_turbidity_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_turbidity"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_turbidity" />
+
+                        <TextView
+                            android:id="@+id/tv_turbidity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Turbidity"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_turbidity" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:elevation="8dp"
+
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_gradient"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_dissolvedOxy"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="34dp"
+                            android:src="@drawable/androidicon"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_dissolved_oxy_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_dissolved_oxy"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_dissolvedOxy" />
+
+                        <TextView
+                            android:id="@+id/tv_dissolved_oxy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iv_dissolvedOxy" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <include layout="@layout/loading_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
