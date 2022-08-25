@@ -8,19 +8,22 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainViewFragmentContainer"
+        android:elevation="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/historyViewFragmentContainer"/>
+
+    <!--        app:layout_constraintBottom_toTopOf="@id/historyViewFragmentContainer"-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/historyViewFragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/mainViewFragmentContainer"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background_gradient"
+            android:background="@drawable/card_gradient"
             android:orientation="vertical"
             android:padding="8dp">
 
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Today"
-                android:textColor="@color/white"
+                android:textColor="@color/accent"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="Tuesday, 23 August 2022"
-                android:textColor="@color/white"
+                android:textColor="@color/accent"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -52,8 +52,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="138dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="8dp"
+                    android:layout_height="212dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="8dp"
                     android:outlineAmbientShadowColor="@color/accent"
@@ -66,7 +66,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/background_gradient"
+                        android:background="#62A8FF"
                         android:orientation="vertical"
                         android:padding="8dp">
 
@@ -75,7 +75,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:layout_marginBottom="34dp"
-                            android:src="@drawable/androidicon"
+                            android:src="@drawable/icon_temp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,8 +109,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="138dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="8dp"
+                    android:layout_height="212dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="8dp"
                     android:outlineAmbientShadowColor="@color/accent"
@@ -123,7 +123,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/background_gradient"
+                        android:background="#62A8FF"
                         android:orientation="vertical"
                         android:padding="8dp">
 
@@ -132,7 +132,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:layout_marginBottom="34dp"
-                            android:src="@drawable/androidicon"
+                            android:src="@drawable/icon_water"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,7 +175,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="138dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="212dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="8dp"
                     android:outlineAmbientShadowColor="@color/accent"
@@ -188,7 +189,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/background_gradient"
+                        android:background="#62A8FF"
                         android:orientation="vertical"
                         android:padding="8dp">
 
@@ -197,7 +198,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:layout_marginBottom="34dp"
-                            android:src="@drawable/androidicon"
+                            android:src="@drawable/icon_temp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -231,7 +232,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="138dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="212dp"
+                    android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:elevation="8dp"
 
@@ -245,7 +247,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/background_gradient"
+                        android:background="#62A8FF"
                         android:orientation="vertical"
                         android:padding="8dp">
 
@@ -254,7 +256,7 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:layout_marginBottom="34dp"
-                            android:src="@drawable/androidicon"
+                            android:src="@drawable/icon_oxy"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 

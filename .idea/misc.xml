@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/drawable/background_gradient.xml" value="0.1915" />
+        <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/drawable/card_gradient.xml" value="0.1545" />
         <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/activity_main.xml" value="0.1947463768115942" />
-        <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/history_item_layout.xml" value="0.5" />
+        <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/history_item_layout.xml" value="0.25" />
         <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/history_layout.xml" value="0.22291666666666668" />
         <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/loading_layout.xml" value="0.22291666666666668" />
-        <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/main_fragment.xml" value="0.22291666666666668" />
+        <entry key="..\:/Codelabs/BismillahAndroIoT/app/src/main/res/layout/main_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>
