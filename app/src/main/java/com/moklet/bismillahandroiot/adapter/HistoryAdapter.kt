@@ -20,10 +20,10 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
                 tvDate.text = dataModel.date
                 tvDay.text = dataModel.day
 
-                tvAcidityData.text = dataModel.water_acidity_data.toString()
-                tvTempData.text = dataModel.temp_data.toString()
-                tvTurbidityData.text = dataModel.turbidity_data.toString()
-                tvDissolvedOxyData.text = dataModel.dissolved_oxy_data.toString()
+                tvAcidityData.text = String.format("%.1f", dataModel.water_acidity_data)
+                tvTempData.text = String.format("%.1f", dataModel.temp_data)
+                tvTurbidityData.text = String.format("%.1f", dataModel.turbidity_data)
+                tvDissolvedOxyData.text = String.format("%.1f", dataModel.dissolved_oxy_data)
             }
         }
 
@@ -43,11 +43,12 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
     }
 
     fun setData(data : ArrayList<DataModel>){
-        val diffCallback = HistoryCallback(listItem, data)
-        val diffResutl = DiffUtil.calculateDiff(diffCallback)
+//        val diffCallback = HistoryCallback(listItem, data)
+//        val diffResutl = DiffUtil.calculateDiff(diffCallback)
         listItem.clear()
         listItem.addAll(data)
-        diffResutl.dispatchUpdatesTo(this)
+        notifyDataSetChanged()
+//        diffResutl.dispatchUpdatesTo(this)
     }
 
 //    companion object{

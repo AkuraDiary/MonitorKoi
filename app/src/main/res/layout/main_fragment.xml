@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="6dp">
+    android:paddingHorizontal="6dp">
 
     <TextView
         android:id="@+id/tv_today"
@@ -17,6 +17,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_date_today"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +25,6 @@
         android:id="@+id/tv_date_today"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:paddingStart="12dp"
         android:text="Tuesday, 23 August 2022"
         android:textColor="@color/accent"
@@ -41,17 +41,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="7dp"
+        app:cardCornerRadius="10dp"
         android:outlineAmbientShadowColor="@color/accent"
-        android:paddingBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_today">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/card_gradient"
+            android:background="@color/primary_500"
             android:orientation="vertical"
             android:padding="8dp">
 
@@ -69,7 +70,7 @@
                     android:layout_weight="1"
                     android:elevation="8dp"
                     android:outlineAmbientShadowColor="@color/accent"
-                    android:outlineSpotShadowColor="@color/black"
+                    android:outlineSpotShadowColor="@color/accent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
