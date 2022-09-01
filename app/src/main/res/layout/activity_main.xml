@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginVertical="18dp"
+        android:layout_marginBottom="20dp"
         android:text="History"
         android:textColor="@color/accent"
         app:layout_constraintStart_toStartOf="parent"

@@ -43,12 +43,12 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
     }
 
     fun setData(data : ArrayList<DataModel>){
-//        val diffCallback = HistoryCallback(listItem, data)
-//        val diffResutl = DiffUtil.calculateDiff(diffCallback)
+        val diffCallback = HistoryCallback(listItem, data)
+        val diffResutl = DiffUtil.calculateDiff(diffCallback)
         listItem.clear()
         listItem.addAll(data)
-        notifyDataSetChanged()
-//        diffResutl.dispatchUpdatesTo(this)
+
+        diffResutl.dispatchUpdatesTo(this)
     }
 
 //    companion object{
