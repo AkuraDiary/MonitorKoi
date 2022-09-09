@@ -9,9 +9,9 @@ object DummyData {
                 DataModel(
                     "Friday",
                     "9 September 2022",
-                    91.0,
+                    25.0,
                     8.43,
-                    3675.0,
+                    50.0,
                     16.0
                 )
             )
@@ -19,9 +19,9 @@ object DummyData {
             DataModel(
                 "Thursday",
                 "8 September 2022",
-                47.0,
+                25.0,
                 8.57,
-                3675.0,
+                50.0,
                 16.0
             )
         )
