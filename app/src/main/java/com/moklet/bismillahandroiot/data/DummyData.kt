@@ -5,18 +5,38 @@ import com.moklet.bismillahandroiot.data.model.DataModel
 object DummyData {
     fun generateDummyData() : List<DataModel>{
         val dummyDatas : MutableList<DataModel> = arrayListOf()
-        for(i in 1..70){
-            dummyDatas.add(
+        dummyDatas.add(
                 DataModel(
-                    "Monday",
-                    "6 Juni 2022",
-                    23.0 / i + i,
-                    23.0 / i + i,
-                    23.0 / i + i,
-                    23.0 / i + i
+                    "Friday",
+                    "9 September 2022",
+                    91.0,
+                    8.43,
+                    3675.0,
+                    16.0
                 )
             )
-        }
+        dummyDatas.add(
+            DataModel(
+                "Thursday",
+                "8 September 2022",
+                47.0,
+                8.57,
+                3675.0,
+                16.0
+            )
+        )
+//        for(i in 1..70){
+//            dummyDatas.add(
+//                DataModel(
+//                    "Monday",
+//                    "6 Juni 2022",
+//                    23.0 / i + i,
+//                    23.0 / i + i,
+//                    23.0 / i + i,
+//                    23.0 / i + i
+//                )
+//            )
+//        }
         return dummyDatas
     }
 
