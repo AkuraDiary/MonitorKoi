@@ -18,7 +18,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
         fun bind(dataModel: DataModel) {
             binding.apply {
                 tvDate.text = dataModel.date
-                tvDay.text = dataModel.day
+                //tvDay.text = dataModel.day
 
                 tvAcidityData.text = String.format("%.1f", dataModel.water_acidity_data)
                 tvTempData.text = String.format("%.1f", dataModel.temp_data)
