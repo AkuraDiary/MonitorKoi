@@ -6,7 +6,9 @@ import com.moklet.bismillahandroiot.R
 import com.moklet.bismillahandroiot.databinding.ActivityMainBinding
 import com.moklet.bismillahandroiot.ui.fragments.HistoryFragment
 import com.moklet.bismillahandroiot.ui.fragments.MainFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -12,7 +12,9 @@ import com.moklet.bismillahandroiot.data.DummyData
 import com.moklet.bismillahandroiot.data.model.DataModel
 import com.moklet.bismillahandroiot.databinding.HistoryLayoutBinding
 import com.moklet.bismillahandroiot.databinding.MainFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HistoryFragment : Fragment(){
     private var binding : HistoryLayoutBinding? = null
     private lateinit var historyAdapter : HistoryAdapter

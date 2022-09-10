@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.moklet.bismillahandroiot.data.DummyData
 import com.moklet.bismillahandroiot.databinding.MainFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
     private var binding : MainFragmentBinding? = null
 
