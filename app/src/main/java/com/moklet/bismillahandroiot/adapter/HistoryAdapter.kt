@@ -12,7 +12,7 @@ import com.moklet.bismillahandroiot.databinding.HistoryLayoutBinding
 
 class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
 
-    val listItem = ArrayList<DataModel>()
+    private val listItem = ArrayList<DataModel>()
 
     inner class HistoryViewHolder(private val binding : HistoryItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(dataModel: DataModel) {
@@ -43,12 +43,12 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
     }
 
     fun setData(data : ArrayList<DataModel>){
-        val diffCallback = HistoryCallback(listItem, data)
-        val diffResutl = DiffUtil.calculateDiff(diffCallback)
+//        val diffCallback = HistoryCallback(listItem, data)
+//        val diffResutl = DiffUtil.calculateDiff(diffCallback)
         listItem.clear()
         listItem.addAll(data)
-
-        diffResutl.dispatchUpdatesTo(this)
+        notifyDataSetChanged()
+//        diffResutl.dispatchUpdatesTo(this)
     }
 
 //    companion object{

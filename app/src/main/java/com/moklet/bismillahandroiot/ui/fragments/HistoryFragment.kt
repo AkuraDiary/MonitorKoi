@@ -1,5 +1,6 @@
 package com.moklet.bismillahandroiot.ui.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HistoryFragment : Fragment(){
     private var binding : HistoryLayoutBinding? = null
-    private lateinit var historyAdapter : HistoryAdapter
+    //private lateinit var historyAdapter : HistoryAdapter
     private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreateView(
@@ -34,21 +35,23 @@ class HistoryFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        historyAdapter = HistoryAdapter()
         val mLayoutManager = LinearLayoutManager(requireContext())
         mLayoutManager.orientation = HORIZONTAL
-        
+        //historyAdapter = HistoryAdapter()
+//        viewModel.feeds.observe(viewLifecycleOwner) {
+//            historyAdapter.setData(it as ArrayList<DataModel>)
+//        }
         binding?.rvHistory?.apply {
             layoutManager = mLayoutManager
             setHasFixedSize(true)
             adapter = historyAdapter
         }
 
-        viewModel.feeds.observe(viewLifecycleOwner) {
-            historyAdapter.setData(it as ArrayList<DataModel>)
-        }
-
 //        val dummyData = DummyData.generateDummyData()
 //        historyAdapter.setData(dummyData as ArrayList<DataModel>)
+    }
+
+    companion object{
+        val historyAdapter = HistoryAdapter()
     }
 }

@@ -30,7 +30,6 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.feeds.observe(viewLifecycleOwner) {
-            Log.d("MainFragment", "onViewCreated: $it")
             val todayData = it.last()
 
             binding?.apply {
