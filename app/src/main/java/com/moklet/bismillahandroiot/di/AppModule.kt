@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-    const val base_url = "https://api.thingspeak.com/channels/1843319/"
+    private const val base_url = "https://api.thingspeak.com/channels/1843319/"
 
     @Provides
     fun provideRetrofitConfig(): Retrofit{

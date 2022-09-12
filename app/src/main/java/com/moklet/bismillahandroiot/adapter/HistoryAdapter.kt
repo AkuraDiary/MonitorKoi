@@ -1,16 +1,10 @@
 package com.moklet.bismillahandroiot.adapter
 
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-
 import com.moklet.bismillahandroiot.data.model.DataModel
 import com.moklet.bismillahandroiot.databinding.HistoryItemLayoutBinding
-import com.moklet.bismillahandroiot.databinding.HistoryLayoutBinding
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
 
@@ -46,24 +40,11 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
     }
 
     fun setData(data : ArrayList<DataModel>){
-//        val diffCallback = HistoryCallback(listItem, data)
-//        val diffResutl = DiffUtil.calculateDiff(diffCallback)
+
         listItem.clear()
         listItem.addAll(data)
         notifyDataSetChanged()
-//        diffResutl.dispatchUpdatesTo(this)
+
     }
 
-//    companion object{
-//        val HistoryCallback = object : DiffUtil.ItemCallback<DataModel>() {
-//            override fun areItemsTheSame(oldItem: DataModel, newItem: DataModel): Boolean {
-//                return oldItem == newItem
-//            }
-//
-//            override fun areContentsTheSame(oldItem: DataModel, newItem: DataModel): Boolean {
-//                return oldItem.date == newItem.date
-//            }
-//
-//        }
-//    }
 }

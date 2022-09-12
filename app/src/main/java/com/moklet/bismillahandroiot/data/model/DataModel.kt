@@ -1,7 +1,5 @@
 package com.moklet.bismillahandroiot.data.model
 
-import java.util.*
-
 data class DataModel(
     val day: String?,
     val date: String?,

@@ -1,13 +1,11 @@
 package com.moklet.bismillahandroiot.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-
 import com.moklet.bismillahandroiot.databinding.MainFragmentBinding
 import com.moklet.bismillahandroiot.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,7 +32,7 @@ class MainFragment : Fragment() {
 
             binding?.apply {
                 tvDateToday.text = todayData.date
-
+                tvToday.text = todayData.day
                 tvDissolvedOxyData.text = todayData.dissolved_oxy_data.toString()
                 tvTempData.text = todayData.temp_data.toString()
                 tvWaterAcidData.text = todayData.water_acidity_data.toString()
