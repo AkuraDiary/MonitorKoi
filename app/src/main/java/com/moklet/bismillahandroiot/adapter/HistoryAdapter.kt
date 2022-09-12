@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.moklet.bismillahandroiot.data.model.DataModel
 import com.moklet.bismillahandroiot.databinding.HistoryItemLayoutBinding
 import com.moklet.bismillahandroiot.databinding.HistoryLayoutBinding
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
 
@@ -18,7 +20,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
         fun bind(dataModel: DataModel) {
             binding.apply {
                 tvDate.text = dataModel.date
-                //tvDay.text = dataModel.day
+                tvDay.text = dataModel.day//dataModel.date?.let { getDay(it) }
 
                 tvAcidityData.text = String.format("%.1f", dataModel.water_acidity_data)
                 tvTempData.text = String.format("%.1f", dataModel.temp_data)
@@ -26,6 +28,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
                 tvDissolvedOxyData.text = String.format("%.1f", dataModel.dissolved_oxy_data)
             }
         }
+
 
     }
 
