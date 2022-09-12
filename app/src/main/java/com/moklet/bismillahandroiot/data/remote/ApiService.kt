@@ -5,6 +5,6 @@ import retrofit2.http.*
 
 interface ApiService {
 
-    @GET("feeeds.json")
+    @GET("feeds.json")
     fun geetAllFeeds(): Call<FeedsResponse>
 }

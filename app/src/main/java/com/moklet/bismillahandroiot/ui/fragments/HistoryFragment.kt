@@ -5,19 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import com.moklet.bismillahandroiot.adapter.HistoryAdapter
-import com.moklet.bismillahandroiot.data.DummyData
+
 import com.moklet.bismillahandroiot.data.model.DataModel
 import com.moklet.bismillahandroiot.databinding.HistoryLayoutBinding
 import com.moklet.bismillahandroiot.databinding.MainFragmentBinding
+import com.moklet.bismillahandroiot.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HistoryFragment : Fragment(){
     private var binding : HistoryLayoutBinding? = null
     private lateinit var historyAdapter : HistoryAdapter
+    private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,7 +43,12 @@ class HistoryFragment : Fragment(){
             setHasFixedSize(true)
             adapter = historyAdapter
         }
-        val dummyData = DummyData.generateDummyData()
-        historyAdapter.setData(dummyData as ArrayList<DataModel>)
+
+        viewModel.feeds.observe(viewLifecycleOwner) {
+            historyAdapter.setData(it as ArrayList<DataModel>)
+        }
+
+//        val dummyData = DummyData.generateDummyData()
+//        historyAdapter.setData(dummyData as ArrayList<DataModel>)
     }
 }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.moklet.bismillahandroiot">
 
+    <uses-permission android:name="android.permission.INTERNET" />s
     <application
         android:name=".MyApplication"
         android:allowBackup="true"

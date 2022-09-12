@@ -12,7 +12,7 @@ class FeedsRepository @Inject constructor(private val service: ApiService) {
     private val _feedsList = MutableLiveData<List<DataModel>>()
     val feedsList: LiveData<List<DataModel>> = _feedsList
 
-    fun getFeeds() {
+    fun getFeeds() : LiveData<List<DataModel>> {
         service.geetAllFeeds()
             .enqueue(object : retrofit2.Callback<FeedsResponse> {
                 override fun onResponse(
@@ -25,6 +25,7 @@ class FeedsRepository @Inject constructor(private val service: ApiService) {
                                 it
                             )
                         })
+
                     }
                 }
 
@@ -32,6 +33,7 @@ class FeedsRepository @Inject constructor(private val service: ApiService) {
                     t.printStackTrace()
                 }
             })
+        return feedsList
     }
 
 

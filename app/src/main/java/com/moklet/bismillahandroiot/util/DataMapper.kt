@@ -8,10 +8,10 @@ object DataMapper {
         return feedModels.map {
             DataModel(
                 it.created_at,
-                it.field2 as Double?,
-                it.field3 as Double?,
-                it.field4 as Double?,
-                it.field5 as Double?,
+                it.field2?.toDouble(),
+                it.field3?.toDouble(),
+                it.field4?.toDouble(),
+                it.field5?.toDouble(),
             )
         }
     }
